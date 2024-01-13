@@ -1,0 +1,1683 @@
+/*******************************/
+/********* General CSS *********/
+/*******************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+body {
+    color: #666666; /* Text color */
+    background: #ffffff; /* Background color */
+    font-family: 'Montserrat', sans-serif; /* Font family */
+    font-weight: 400; /* Font weight */
+    padding-top: 70px; /* Added top padding to accommodate fixed header */
+    margin-top: 0; /* Ensures no additional space above the body */
+    scroll-behavior: smooth;
+
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-weight: 100;
+}
+
+a {
+    color: #454545;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #333333;
+    outline: none;
+    text-decoration: none;
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #FFD662;
+    color: #000000;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    border-radius: 5px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 9;
+}
+
+.back-to-top:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.back-to-top i {
+    padding-top: 10px;
+}
+
+
+/*******************************/
+/********** Header CSS *********/
+/*******************************/
+.header.scrolled {
+    padding-top: 10px; /* Smaller padding */
+    background: rgba(23, 18, 38, 0.8); /* Transparency */
+    transition: padding 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition */
+}
+
+.header .brand img.scrolled {
+    height: 120px; /* Smaller logo */
+    width: 90px;
+    transition: height 0.3s ease-in-out; /* Smooth transition for the logo */
+}
+.header {
+
+
+    position: fixed; /* Changed from relative to fixed */
+    width: 100%;
+    background: #171226;
+    top: 0; /* Added to fix at the top */
+    left: 0; /* Added to align left */
+    right: 0; /* Added to align right */
+    z-index: 1000; /* Ensure it's above other content */
+    padding-top: 0px;
+}
+
+.header.home {
+    margin-bottom: 45px;
+    background: linear-gradient(rgba(23, 18, 38, 1), rgba(23, 18, 38, .9), rgba(23, 18, 38, 1)), url(../img/header.jpg);
+    position: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    padding-top: 70;
+}
+
+.header1.home {
+    margin-bottom: 45px;
+    background: linear-gradient(rgba(23, 18, 38, 1), rgba(23, 18, 38, .9), rgba(23, 18, 38, 1));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10;
+}
+
+
+.header .header-top {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.header .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.header .brand img {
+    width: auto;
+    height: 170px;
+    width: 140px;
+    transition: height 0.3s ease-in-out; /* Adjust this value to fit your logo's height */
+}
+
+.header .topbar {
+    position: relative;
+    text-align: right;
+}
+
+.header .topbar .topbar-col {
+    display: inline-block;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.header .topbar-col a {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.header .topbar-col a i {
+    margin-right: 10px;
+    color: #FFD662;
+}
+
+.header .topbar-social {
+    position: relative;
+}
+
+.header .topbar-social a {
+    display: inline-block;
+}
+
+.header .topbar-social a i {
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.header .topbar-social a:last-child i {
+    margin: 0;
+}
+
+.header .topbar-social a:hover i {
+    color: #FFD662;
+}
+
+.header .dropdown-menu {
+    margin-top: 0;
+    border: 0;
+    border-radius: 5px;
+    background: #eeeeee;
+}
+
+.header .dropdown-menu a.active {
+    color: #FFD662;
+}
+
+@media (min-width: 992px) {
+    .header .navbar {
+        background: transparent !important;
+    }
+    
+    .header .navbar-brand {
+        display: none;
+    }
+    
+    .header .navbar-light a.nav-link,
+    .header .navbar-light .show > .nav-link {
+        position: relative;
+        padding: 8px 10px;
+        color: #ffffff;
+        font-size: 16px;
+        z-index: 1;
+    }
+    
+    .header .navbar-light a.nav-link:hover,
+    .header .navbar-light a.nav-link.active {
+        color: #FFD662;
+    }
+}
+
+
+
+.header .navbar .btn {
+    position: relative;
+    margin-left: 15px;
+    padding: 12px 20px 10px 20px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #171226;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.header .navbar .btn:hover {
+    color: #000000;
+    background: #FFD662;
+}
+
+.header .navbar .btn i {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+
+
+.header1 .hero {
+    padding-top: 160px;
+    padding-left: 20px;
+    padding-right: 40px;
+
+    padding-bottom: 80px;
+    height: 100vh;
+    
+}
+.fixed-review-summary {
+    position: fixed; /* Keeps the review summary fixed on the screen */
+    bottom: 10px; /* Distance from the bottom of the screen */
+    left: 10px; /* Distance from the right of the screen for a more modern look */
+    background-color: #2C3E50; /* Dark background for contrast */
+    color: #FFFFFF; /* White text for readability */
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners for a modern look */
+    font-family: 'Arial', sans-serif;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.fixed-review-summary a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center; /* Aligns items horizontally */
+}
+
+.fixed-review-summary .stars {
+    color: #FFD700; /* Gold color for stars */
+    margin-right: 8px; /* Spacing between stars and score */
+}
+
+.fixed-review-summary .score {
+    font-weight: bold;
+    margin-right: 4px; /* Spacing between score and review-count */
+}
+
+.fixed-review-summary .review-count {
+    text-transform: uppercase; /* Capitalized label for a modern look */
+    font-size: 0.9em; /* Slightly smaller font size for the label */
+}
+
+/* Hover effect */
+.fixed-review-summary:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+
+
+.header1 .hero h2 {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.header1 .hero h2 span {
+    color: #FFD662;
+}
+
+.header1 .hero p {
+    margin: 10px 0 20px 0;
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.header1 .hero a.btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #171226;
+    border: none;
+    border-radius: 5px;
+    background: #ffffff;
+    transition: .3s;
+}
+
+.header1 .hero a.btn:hover {
+    color: #000000;
+    background: #FFD662;
+}
+
+.header1 .hero .form {
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, .3);
+    border-radius: 5px;
+}
+
+.header1 .hero .form h3 {
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.header1 .hero .form input,
+.header1 .hero .form select,
+.header1 .hero .form textarea {
+    margin-bottom: 15px;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .2);
+}
+
+.header1 .hero .form textarea {
+    height: 75px;
+}
+
+.header1 .hero .form select,
+.header1 .hero .form input::placeholder,
+.header1 .hero .form textarea::placeholder {
+    color: #ffffff;
+}
+
+.header1 .hero .form select option:not(:checked) {
+    color: #666666;
+}
+
+.header1 .hero .form .btn {
+    position: relative;
+    padding: 10px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+
+.header1 .hero .form .btn:hover {
+    color: #00539C;
+    background: #ffffff;
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header .brand img {
+        max-width: 80px; /* Even smaller logo for very small devices */
+    }
+
+    /* Further style adjustments for the hero section if needed */
+    .header1 .hero {
+        padding-top: 100px; /* Adjust the top padding for the hero section */
+        padding-bottom: 40px; /* Adjust the bottom padding for the hero section */
+    }
+
+    /* Adjust the size and spacing of the hero header elements */
+    .header1 .hero h2 {
+        font-size: 40px; /* Smaller font size for the hero title */
+    }
+
+    .header1 .hero p {
+        font-size: 18px;
+    }
+
+    .header1 .hero a.btn {
+        padding: 10px 20px; /* Adjust padding for buttons */
+        font-size: 14px; /* Adjust font size for buttons */
+    }
+    
+    /* Adjust form element sizes in the hero section */
+    .header1 .hero .form input,
+    .header1 .hero .form select,
+    .header1 .hero .form textarea {
+        font-size: 14px; /* Adjust font size for form elements */
+    }
+    
+    .header1 .hero .form .btn {
+        padding: 8px 20px; /* Adjust padding for form buttons */
+        font-size: 14px; /* Adjust font size for form buttons */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust the header padding for mobile devices */
+    .header {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+   
+    
+
+    /* Adjust the logo size for mobile devices */
+    .header .brand img {
+        max-width: 100px; /* Smaller logo for mobile devices */
+    }
+
+    /* Adjust the menu button size if you have one */
+    .header .navbar-toggler {
+        font-size: 24px; /* Larger icon for better touch */
+    }
+
+    /* Adjust the dropdown menu styling for mobile */
+ 
+    /* Style adjustments for the navigation links */
+    .header .navbar-light a.nav-link {
+        font-size: 14px; /* Smaller font size for nav links */
+        padding: 8px 5px; /* Adjust padding for nav links */
+    }
+
+    /* Style adjustments for the contact info */
+    .header .topbar-col a {
+        font-size: 16px; /* Smaller font size for contact links */
+    }
+}
+/*******************************/
+/******* Page Header CSS *******/
+/*******************************/
+.page-header {
+    position: relative;
+    margin-bottom: 60px;
+    padding: 160px 0px;
+    text-align: center;
+    background: #FFD662;
+}
+
+.page-header h2 {
+    color: #000000;
+    font-size: 60px;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.page-header a {
+    position: relative;
+    padding: 0 12px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #171226;
+}
+
+.page-header a:hover {
+    color: #000000;
+}
+
+.page-header a::after {
+    position: absolute;
+    content: "/";
+    width: 8px;
+    height: 8px;
+    top: -2px;
+    right: -7px;
+    text-align: center;
+    color: #666666;
+}
+
+.page-header a:last-child::after {
+    display: none;
+}
+
+@media (max-width: 80px) {
+    .page-header {
+        padding: 0px; /* Adjusted padding for tablet screens */
+    }
+    .page-header h2 {
+        font-size: 48px; /* Smaller font size for tablet screens */
+    }
+    .page-header a {
+        font-size: 20px; /* Slightly smaller font size for links */
+    }
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 80px) {
+    .page-header {
+        padding-top: 0px; /* Reduced padding for mobile screens */
+    }
+    .page-header h2 {
+        font-size: 36px; /* Smaller font size for mobile screens */
+        line-height: 1.2; /* Adjust line height for better readability */
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+    .page-header a {
+        font-size: 18px; /* Smaller font size for links */
+    }
+}
+
+/* Even smaller devices */
+@media (max-width: 280px) {
+    .page-header {
+        padding: 0px; /* Further reduced padding for small mobile screens */
+    }
+    .page-header h2 {
+        font-size: 30px; /* Reduced font size for h2 on very small screens */
+        margin-bottom: 10px; /* Reduced bottom margin for h2 */
+    }
+    .page-header a {
+        font-size: 16px; /* Further reduce the font size for links */
+    }
+    .page-header a::after {
+        right: -10px; /* Adjusted right position of slash for smaller font size */
+    }
+}
+
+
+
+/*******************************/
+/******* Section Header ********/
+/*******************************/
+.section-header {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 3px;
+    left: calc(50% - 50px);
+    bottom: 0;
+    background: linear-gradient(to left, #FFD662, #00539C, #FFD662);
+    border-radius: 100%;
+}
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 9px;
+    left: calc(50% - 10px);
+    bottom: -3px;
+    background: #171226;
+    border-radius: 5px;
+}
+
+.section-header p {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.section-header h2 {
+    color: #171226;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.section-header.left {
+    text-align: left;
+}
+
+.section-header.left::before {
+    width: 60px;
+    left: 0;
+    background: linear-gradient(to left, #FFD662, #00539C, #00539C);
+    border-radius: 0 100% 100% 0;
+}
+
+.section-header.left::after {
+    left: 0;
+    border-radius: 5px;
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.about .about-img img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about .about-text h2 {
+    position: relative;
+    color: #171226;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.about .about-text h2 span {
+    font-size: 120px;
+}
+
+.about .about-text p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.about .about-text a.btn {
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+
+.about .about-text a.btn:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+@media (max-width: 767.98px) {
+    .about .about-img img {
+        margin-bottom: 30px;
+    }
+}
+
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.services-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header p {
+    font-size: 20px;
+    color: #171226;
+    margin-bottom: 5px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    color: #171226;
+    margin-bottom: 20px;
+}
+
+.service-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.service-container {
+    display: flex; /* changed to flex for better alignment and spacing */
+}
+
+.service-item {
+    flex: 0 0 calc(25% - 15px); /* Adjusted to account for margin-right */
+    max-width: calc(25% - 15px); /* Ensure the item doesn't grow larger */
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+    margin-right: 15px; /* Keep the margin to space out items */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 15px;
+    white-space: normal;
+    display: inline-block;
+    vertical-align: top;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex: 0 0 calc(50% - 15px); /* 2 items per row */
+        max-width: calc(50% - 15px);
+    }
+}
+
+/* Media query for even smaller screens */
+@media (max-width: 480px) {
+    .service-item {
+        flex: 0 0 100%; /* 1 item per row */
+        max-width: 100%;
+        margin-right: 0; /* Remove the margin since it's full width now */
+    }
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+
+
+
+
+/*******************************/
+/********* Feature CSS *********/
+/*******************************/
+.feature {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.feature .section-header {
+    margin-bottom: 30px;
+}
+
+.feature a.btn {
+    margin-top: 10px;
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+
+.feature a.btn:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.feature .feature-item {
+    margin-bottom: 30px;
+}
+
+.feature .feature-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.feature .feature-item h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #171226;
+}
+
+.feature .feature-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 767.98px) {
+    .feature a.btn {
+        margin-bottom: 45px;
+    }
+}
+
+
+
+
+/*******************************/
+/*********** FAQs CSS **********/
+/*******************************/
+.faqs {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.faqs .section-header {
+    margin-bottom: 30px;
+}
+
+.faqs img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media(max-width: 767.98px) {
+    .faqs img {
+        margin-bottom: 30px;
+    }
+}
+
+.faqs .card {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #eeeeee;
+}
+
+.faqs .card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.faqs .card-header {
+    padding: 0;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs .card-header a {
+    display: block;
+    width: 100%;
+    color: #00539C;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.faqs .card-header a span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    background: #FFD662;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.faqs .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: #00539C;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: #00539C;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.faqs .card-body {
+    padding: 15px 0 0 0;
+    font-size: 16px;
+    border: none;
+    background: #ffffff;
+}
+
+.faqs a.btn {
+    margin-top: 30px;
+    padding: 15px 35px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+
+.faqs a.btn:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+
+/*******************************/
+/****** Pricing Plan CSS *******/
+/*******************************/
+.price {
+    position: relative;
+    padding: 45px 0 15px 0;
+}
+
+.price .price-item {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    margin-bottom: 30px;
+}
+
+.price .price-header {
+    padding: 30px 0 50px 0;
+    color: #000000;
+    background: #FFD662;
+    border-radius: 5px 5px 0 0;
+}
+
+.price .featured-item .price-header {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.price .price-icon {
+    margin-bottom: 15px;
+}
+
+.price .price-icon i {
+    display: inline-block;
+    font-size: 45px;
+}
+
+.price .price-title h2 {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.price .price-pricing h2 {
+    font-size: 60px;
+    font-weight: 100;
+    margin-left: 15px;
+    margin-bottom: 0;
+}
+
+.price .price-pricing h2 small {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 16px;
+    margin-left: -15px;
+}
+
+.price .price-body {
+    padding: 20px 0;
+    background: #ffffff;
+    border-radius: 25px 30px 0 0;
+    margin-top: -30px;
+}
+
+.price .price-des ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.price .price-des ul li {
+    color: #2A293E;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 5px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.price .price-des ul li:last-child {
+    border: none;
+}
+
+.price .price-footer {
+    padding-bottom: 30px;
+    background: #ffffff;
+    border-radius: 0 0 5px 5px;
+}
+
+
+.price .price-action a {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 2px;
+    background: #FFD662;
+    border-radius: 5px;
+    transition:  .3s;
+}
+
+.price .price-action a i {
+    margin-right: 5px;
+}
+
+.price .price-action a:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.price .featured-item .price-action a {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.price .featured-item .price-action a:hover {
+    color: #000000;
+    background: #FFD662;
+}
+
+
+/*******************************/
+/********** Newsletter *********/
+/*******************************/
+.newsletter {
+    position: relative;
+    margin: 45px 0;
+    padding: 60px 0;
+    background: #00539C;
+}
+
+.newsletter h2 {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.newsletter p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.newsletter .form {
+    position: relative;
+}
+
+.newsletter input {
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter .btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #000000;
+    background: #FFD662;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.newsletter .btn:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.testimonial {
+    position: relative;
+    padding: 45px 0;
+}
+
+.testimonial .testimonial-item {
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.testimonial .testimonial-img {
+    position: relative;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.testimonial .testimonial-item img {
+    margin: 0 auto;
+    width: 150px;
+    border: 15px solid #ffffff;
+    border-radius: 100px;
+}
+
+.testimonial .testimonial-content {
+    position: relative;
+    margin-top: -90px;
+    padding: 100px 25px 25px 25px;
+    text-align: center;
+    background: #FFD662;
+    border-radius: 5px;
+}
+
+.testimonial .testimonial-item p {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.testimonial .testimonial-content h3 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.testimonial .testimonial-content h4 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.testimonial .owl-nav,
+.testimonial .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.testimonial .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FFD662;
+}
+
+.testimonial .owl-dot.active {
+    background: #00539C;
+}
+
+
+/*******************************/
+/*********** Blog CSS **********/
+/*******************************/
+.blog {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.blog .blog-item {
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
+
+.blog .blog-item img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.blog .blog-item h3 {
+    margin: 0;
+    padding: 25px 30px 5px 30px;
+    font-size: 22px;
+    font-weight: 300;
+    color: #00539C;
+}
+
+.blog .blog-item .meta {
+    padding: 0 30px 15px 30px;
+}
+
+.blog .blog-item .meta * {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #999999;
+}
+
+.blog .blog-item .meta i {
+    margin: 0 2px 0 10px;
+}
+
+.blog .blog-item .meta i:first-child {
+    margin-left: 0;
+}
+
+.blog .blog-item p {
+    padding: 0 30px;
+    font-size: 16px;
+}
+
+.blog .blog-item a.btn {
+    position: relative;
+    margin: 5px 30px 30px 30px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+}
+
+.blog .blog-item:hover a.btn {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.blog .blog-item a.btn:hover {
+    color: #000000;
+    background: #FFD662;
+}
+
+
+/*******************************/
+/******* Call to Action ********/
+/*******************************/
+.call-to-action {
+    position: relative;
+    margin: 45px 0;
+    padding: 60px 0;
+    background: #171226;
+}
+
+.call-to-action h2 {
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.call-to-action p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.call-to-action a {
+    float: right;
+    height: 60px;
+    padding: 16px 35px 14px 35px;
+    font-size: 18px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #000000;
+    background: #FFD662;
+    border-radius: 5px;
+}
+
+.call-to-action a:hover {
+    color: #FFD662;
+    background: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .call-to-action a {
+        float: left;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+/*******************************/
+/********* Contact CSS *********/
+/*******************************/
+.contact {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.contact .faqs {
+    padding: 0;
+}
+
+@media(max-width: 767.98px) {
+    .contact .faqs {
+        margin-bottom: 30px;
+    }
+}
+
+.contact .contact-form input {
+    height: 60px;
+    border-radius: 5px;
+}
+
+.contact .contact-form .btn {
+    height: 60px;
+    padding: 0 20px;
+    color: #000000;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #FFD662;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.contact .contact-form .btn:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+
+
+
+/*******************************/
+/********* Footer CSS **********/
+/*******************************/
+.footer {
+    position: relative;
+    margin-top: 45px;
+    padding-top: 90px;
+    background: #171226;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+.footer .footer-contact,
+.footer .footer-link,
+.footer .footer-form {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.footer .footer-contact h2,
+.footer .footer-link h2,
+.footer .footer-form h2{
+    position: relative;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #FFD662;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer .footer-contact p {
+    font-size: 14px;
+}
+
+.footer .footer-contact p i {
+    width: 25px;
+}
+
+.footer .footer-social {
+    position: relative;
+    margin-top: 25px;
+}
+
+.footer .footer-social a {
+    display: inline-block;
+}
+
+.footer .footer-social a i {
+    margin-right: 15px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.footer .footer-social a:last-child i {
+    margin: 0;
+}
+
+.footer .footer-social a:hover i {
+    color: #FFD662;
+}
+
+.footer .footer-link a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    
+}
+
+.footer .footer-link a::before {
+    position: relative;
+    content: "\f0da";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .footer-link a:hover {
+    color: #FFD662;
+}
+
+.footer .footer-form input {
+    height: 45px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer .footer-form .btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    font-size: 14px;
+    font-weight:400;
+    text-transform: uppercase;
+    color: #000000;
+    background: #FFD662;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.footer .footer-form .btn:hover {
+    color: #ffffff;
+    background: #00539C;
+}
+
+.footer .footer-menu {
+    position: relative;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu .f-menu {
+    font-size: 0;
+    text-align: center;
+}
+
+.footer .footer-menu .f-menu a {
+    color: #ffffff;
+    font-size: 14px;
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid #ffffff;
+}
+
+.footer .footer-menu .f-menu a:hover {
+    color: #FFD662;
+}
+
+.footer .footer-menu .f-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+
+
+.footer .copyright {
+    padding: 30px 15px;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .copyright p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer .copyright .col-md-6:last-child p {
+    text-align: right;
+}
+
+.footer .copyright p a {
+    color: #FFD662;
+    font-weight: 400;
+}
+
+.footer .copyright p a:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer .copyright p,
+    .footer .copyright .col-md-6:last-child p {
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+.trusted {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.trusted-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.trusted-logo img {
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.trusted-logo:hover img {
+    filter: grayscale(0%);
+}
+
+.section-header {
+    margin-bottom: 40px;
+}
+
+.sevice-item {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.sevice-item:hover {
+    transform: translateY(-10px);
+}
+
+.sevice-item i {
+    color: #171226; /* Adjust color as needed */
+}
+
+.sevice-item h4 {
+    margin-top: 20px;
+    font-weight: 600;
+}
+.awards {
+    text-align: center;
+    padding: 30px;
+    padding-top: 160px;
+    background-color: #eef2f7; /* Soft blue background */
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.awards h2 {
+    color: #2a3f5f; /* Darker shade for the heading */
+    margin-bottom: 15px;
+    font-weight: 600; /* Bolder font for the heading */
+    font-size: 1.5em; /* Larger font size for the heading */
+}
+
+.awards ul {
+    list-style: none;
+    padding: 0;
+}
+
+.awards li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: flex-start; /* Aligns items to the start of the container */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.awards img {
+    width: 100px; /* Fixed width for consistency */
+    margin-right: 10px; /* Space between image and text */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+
+/* Hover effects */
+.awards li:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    cursor: pointer;
+}
+
+.awards img:hover {
+    transform: rotate(10deg); /* Rotate image slightly on hover */
+}
+
+.accreditations {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light grey background */
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+}
+
+.accreditations h2 {
+    color: #2c3e50; /* Dark blue color for the heading */
+    margin-bottom: 15px;
+    font-weight: 600; /* Bolder font for the heading */
+    font-size: 1.5em; /* Larger font size for the heading */
+}
+
+.accreditations ul {
+    list-style: none;
+    padding: 0;
+}
+
+.accreditations li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start; /* Aligns items to the top */
+    justify-content: flex-start; /* Aligns items to the left */
+    transition: transform 0.3s ease-in-out;
+}
+
+.accreditations img {
+    width: auto; /* Allows the image to maintain its aspect ratio */
+    max-width: 140px; /* Slightly larger than before */
+    height: auto;
+    margin-right: 20px; /* Adds space between the image and the text */
+    transition: transform 0.3s ease-in-out;
+}
+
+.accreditations p {
+    color: #34495e; /* Slightly lighter blue for the text */
+    text-align: justify;
+    max-width: 80%;
+    margin: 0; /* Removes automatic margin */
+    font-size: 1em; /* Standard font size */
+    line-height: 1.6; /* Improved line spacing for readability */
+    margin-bottom: 1em;
+}
+
+/* Hover effects */
+.accreditations li:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.accreditations img:hover {
+    transform: rotate(-5deg);
+}
+
+
+.service-item .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px; /* Gives a pill-like shape */
+    background-image: linear-gradient(to right, #171226, #171226); /* Gradient background */
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    cursor: pointer; /* Changes the mouse cursor to indicate clickable */
+}
+
+.service-item .btn:hover, .service-item .btn:focus {
+    transform: translateY(-2px); /* Slightly raise the button when hovered or focused */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Larger shadow for hover/focus */
+    outline: none; /* Remove outline on focus for a clean look */
+    background-image: linear-gradient(to right, #2193b0, #6dd5ed); /* Change gradient direction */
+}
+
+/* Make sure to include focus styles for accessibility */
+.service-item .btn:focus {
+    border: 2px solid #fff; /* Add a border to highlight focus */
+}
