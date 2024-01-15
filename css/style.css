@@ -236,7 +236,7 @@ a:focus {
     margin-right: 8px;
 }
 .hero-section {
-    background: url('/home/administrator/Downloads/cln3 updated/img/bghome.jpg') no-repeat center center;
+    background: url('img/bghome.jpg') no-repeat center center;
     background-size: cover;
     padding: 350px 0;
     color: #fff;
