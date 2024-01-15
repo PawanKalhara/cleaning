@@ -3,6 +3,12 @@
 /*******************************/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -16,6 +22,8 @@ body {
     scroll-behavior: smooth;
 
 }
+
+
 
 h1,
 h2, 
@@ -46,7 +54,6 @@ a:focus {
 .wrapper {
     position: relative;
     width: 100%;
-    max-width: 1366px;
     margin: 0 auto;
     background: #ffffff;
 }
@@ -82,7 +89,7 @@ a:focus {
 /********** Header CSS *********/
 /*******************************/
 .header.scrolled {
-    padding-top: 10px; /* Smaller padding */
+    padding-top: 0px; /* Smaller padding */
     background: rgba(23, 18, 38, 0.8); /* Transparency */
     transition: padding 0.3s ease-in-out, background 0.3s ease-in-out; /* Smooth transition */
 }
@@ -97,32 +104,14 @@ a:focus {
 
     position: fixed; /* Changed from relative to fixed */
     width: 100%;
-    background: #171226;
+    background: #222380;
     top: 0; /* Added to fix at the top */
     left: 0; /* Added to align left */
     right: 0; /* Added to align right */
     z-index: 1000; /* Ensure it's above other content */
-    padding-top: 0px;
 }
 
-.header.home {
-    margin-bottom: 45px;
-    background: linear-gradient(rgba(23, 18, 38, 1), rgba(23, 18, 38, .9), rgba(23, 18, 38, 1)), url(../img/header.jpg);
-    position: fixed;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    padding-top: 70;
-}
 
-.header1.home {
-    margin-bottom: 45px;
-    background: linear-gradient(rgba(23, 18, 38, 1), rgba(23, 18, 38, .9), rgba(23, 18, 38, 1));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 10;
-}
 
 
 .header .header-top {
@@ -151,7 +140,7 @@ a:focus {
 
 .header .topbar .topbar-col {
     display: inline-block;
-    padding: 0 15px;
+    padding: 0 10px;
     margin-bottom: 15px;
 }
 
@@ -246,18 +235,165 @@ a:focus {
     font-size: 16px;
     margin-right: 8px;
 }
-
-
-
-.header1 .hero {
-    padding-top: 160px;
-    padding-left: 20px;
-    padding-right: 40px;
-
-    padding-bottom: 80px;
-    height: 100vh;
-    
+.hero-section {
+    background: url('/home/administrator/Downloads/cln3 updated/img/bghome.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 350px 0;
+    color: #fff;
+    position: relative;
+    text-align: left;
 }
+
+/* Overlay for text readability */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    z-index: 1;
+}
+
+/* Content container positioning */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Styling for headings, paragraphs, and buttons */
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s 0.5s forwards;
+}
+
+.hero-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s 0.7s forwards;
+}
+
+.btn-modern {
+    background-color: #28a745;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #fff;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s 0.9s forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quote-form {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 0; /* Remove top margin as it will be on top */
+}
+
+.quote-form h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque than form background */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.form-control::placeholder {
+    color: #666;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* Darken button on hover */
+    }
+    @media (max-width: 992px) {
+        .quote-form {
+        margin-top: 20px;
+        }
+        }
+
+
+
+
+/* Responsive adjustments for the hero section */
+@media (max-width: 992px) {
+    .hero-section {
+        padding: 80px 20px; /* Adjust padding and add horizontal padding */
+    }
+    .hero-section h1 {
+        font-size: 30px; /* Adjust font size for medium devices */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 15px; /* Adjust padding for smaller devices */
+    }
+    .hero-section h1 {
+        font-size: 28px; /* Adjust font size for small devices */
+    }
+    .hero-section p {
+        font-size: 16px; /* Adjust paragraph font size for small devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 40px 10px; /* Adjust padding for extra small devices */
+    }
+    .hero-section h1 {
+        font-size: 24px; /* Further adjust font size for extra small devices */
+    }
+    .hero-section p {
+        font-size: 14px; /* Further adjust paragraph font size for extra small devices */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Adjust this value to match the height of your mobile header */
+    body {
+        padding-top: 250px; /* For example, if the mobile header is 120px high */
+    }
+
+    .hero-section {
+        /* Add more top padding to the hero section to ensure it starts below the header */
+        padding-top: 250px;
+    }
+}
+
+
 .fixed-review-summary {
     position: fixed; /* Keeps the review summary fixed on the screen */
     bottom: 10px; /* Distance from the bottom of the screen */
@@ -301,144 +437,54 @@ a:focus {
 
 
 
-.header1 .hero h2 {
-    margin: 0;
-    font-size: 60px;
-    font-weight: 100;
-    color: #ffffff;
-}
 
-.header1 .hero h2 span {
-    color: #FFD662;
-}
 
-.header1 .hero p {
-    margin: 10px 0 20px 0;
-    font-size: 22px;
-    color: #ffffff;
-}
 
-.header1 .hero a.btn {
-    position: relative;
-    padding: 15px 30px;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #171226;
-    border: none;
-    border-radius: 5px;
-    background: #ffffff;
-    transition: .3s;
-}
-
-.header1 .hero a.btn:hover {
-    color: #000000;
-    background: #FFD662;
-}
-
-.header1 .hero .form {
-    padding: 30px;
-    border: 1px solid rgba(255, 255, 255, .4);
-    background: rgba(255, 255, 255, .3);
-    border-radius: 5px;
-}
-
-.header1 .hero .form h3 {
-    color: #ffffff;
-    font-weight: 300;
-}
-
-.header1 .hero .form input,
-.header1 .hero .form select,
-.header1 .hero .form textarea {
-    margin-bottom: 15px;
-    height: 45px;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, .3);
-    background: rgba(255, 255, 255, .2);
-}
-
-.header1 .hero .form textarea {
-    height: 75px;
-}
-
-.header1 .hero .form select,
-.header1 .hero .form input::placeholder,
-.header1 .hero .form textarea::placeholder {
-    color: #ffffff;
-}
-
-.header1 .hero .form select option:not(:checked) {
-    color: #666666;
-}
-
-.header1 .hero .form .btn {
-    position: relative;
-    padding: 10px 35px;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: #000000;
-    border: none;
-    border-radius: 5px;
-    background: #FFD662;
-    transition: .3s;
-}
-
-.header1 .hero .form .btn:hover {
-    color: #00539C;
-    background: #ffffff;
-}
 
 @media (max-width: 480px) {
     .header {
         padding-top: 10px;
         padding-bottom: 10px;
     }
+    .header .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .header.home {
+        padding-top: 10px; /* Adjusted padding for the home header on phones */
+    }
 
     .header .brand img {
         max-width: 80px; /* Even smaller logo for very small devices */
     }
 
-    /* Further style adjustments for the hero section if needed */
-    .header1 .hero {
-        padding-top: 100px; /* Adjust the top padding for the hero section */
-        padding-bottom: 40px; /* Adjust the bottom padding for the hero section */
-    }
 
-    /* Adjust the size and spacing of the hero header elements */
-    .header1 .hero h2 {
-        font-size: 40px; /* Smaller font size for the hero title */
-    }
-
-    .header1 .hero p {
-        font-size: 18px;
-    }
-
-    .header1 .hero a.btn {
-        padding: 10px 20px; /* Adjust padding for buttons */
-        font-size: 14px; /* Adjust font size for buttons */
-    }
-    
-    /* Adjust form element sizes in the hero section */
-    .header1 .hero .form input,
-    .header1 .hero .form select,
-    .header1 .hero .form textarea {
-        font-size: 14px; /* Adjust font size for form elements */
-    }
-    
-    .header1 .hero .form .btn {
-        padding: 8px 20px; /* Adjust padding for form buttons */
-        font-size: 14px; /* Adjust font size for form buttons */
+}
+@media (max-width: 480px) {
+    .container-fluid {
+        padding: 0 10px; /* Add some padding to the sides for better spacing */
     }
 }
+
+
 
 @media (max-width: 768px) {
     /* Adjust the header padding for mobile devices */
     .header {
-        padding-top: 0px;
-        padding-bottom: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .header .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-   
+    .header .topbar-col {
+        display: block; /* Adjust layout for topbar columns on phones */
+        padding: 5px 0; /* Adjust padding for topbar columns on phones */
+        margin-bottom: 5px; /* Add space between topbar columns on phones */
+    }
     
 
     /* Adjust the logo size for mobile devices */
@@ -670,6 +716,23 @@ a:focus {
         margin-bottom: 30px;
     }
 }
+@media (max-width: 768px) {
+    .page-header {
+        padding-top: 270px;
+        margin-bottom: 10px;
+    }
+    .page-header h2 {
+        padding-top: 20px;
+        padding-bottom: 30px;
+        font-size: 25px;
+        margin-bottom: 0px; /* Adjust the font size for better readability on mobile */
+    }
+    .about {
+        padding-top: 0px;
+    }
+
+}
+
 
 
 /*******************************/
@@ -684,6 +747,8 @@ a:focus {
     font-size: 20px;
     color: #171226;
     margin-bottom: 5px;
+    flex-grow: 1;
+
 }
 
 .section-header h2 {
@@ -696,13 +761,16 @@ a:focus {
     overflow-x: auto;
     white-space: nowrap;
     padding: 20px 0;
+    padding-bottom: 80px;
 }
 
 .service-container {
     display: flex; /* changed to flex for better alignment and spacing */
+    
 }
 
 .service-item {
+    position: relative;
     flex: 0 0 calc(25% - 15px); /* Adjusted to account for margin-right */
     max-width: calc(25% - 15px); /* Ensure the item doesn't grow larger */
     text-align: center;
@@ -711,6 +779,7 @@ a:focus {
     margin-right: 15px; /* Keep the margin to space out items */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding: 15px;
+    padding-bottom: 60px;
     white-space: normal;
     display: inline-block;
     vertical-align: top;
@@ -1087,7 +1156,8 @@ a:focus {
 /*******************************/
 .testimonial {
     position: relative;
-    padding: 45px 0;
+    padding-top: 45px;
+    padding-bottom: 0px;
 }
 
 .testimonial .testimonial-item {
@@ -1243,7 +1313,7 @@ a:focus {
 /*******************************/
 .call-to-action {
     position: relative;
-    margin: 45px 0;
+    margin-bottom: 0px;
     padding: 60px 0;
     background: #171226;
 }
@@ -1339,8 +1409,9 @@ a:focus {
 /*******************************/
 .footer {
     position: relative;
-    margin-top: 45px;
+    margin-top: 10px;
     padding-top: 90px;
+    margin-bottom: 0px;
     background: #171226;
     color: #ffffff;
     font-weight: 300;
@@ -1505,22 +1576,46 @@ a:focus {
 .trusted {
     padding: 50px 0;
     background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.trusted .container {
+    overflow: hidden;
+}
+
+.trusted-logos-wrapper {
+    display: flex;
+    width: fit-content;
+    animation: scrollLogo 30s linear infinite;
 }
 
 .trusted-logo {
-    text-align: center;
-    margin-bottom: 20px;
+    flex: 0 0 120px; /* Set a fixed width for all logos */
+    margin-right: 30px; /* Adjust the space between logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px; /* Set a fixed height for all logos */
 }
 
 .trusted-logo img {
     max-width: 100%;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    max-height: 100%;
+    object-fit: contain;
+    -webkit-user-drag:auto;
+     /* This will ensure the image is contained within the dimensions and is not stretched */
 }
 
-.trusted-logo:hover img {
-    filter: grayscale(0%);
+@keyframes scrollLogo {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
 }
+
+
 
 .section-header {
     margin-bottom: 40px;
@@ -1548,113 +1643,142 @@ a:focus {
     font-weight: 600;
 }
 .awards {
-    text-align: center;
-    padding: 30px;
-    padding-top: 160px;
-    background-color: #eef2f7; /* Soft blue background */
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    text-align: left; /* Align text to the left for a cleaner look */
+    padding: 40px 10%; /* Responsive horizontal padding */
+    background-color: #ffffff; /* White background for a clean look */
+    border-radius: 10px; /* Rounded corners */
+    margin: 40px auto; /* Center the section with vertical margin */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    font-family: 'Open Sans', sans-serif; /* Consistent modern font with the accreditations section */
+    max-width: 960px; /* Maximum width for content readability */
 }
 
 .awards h2 {
-    color: #2a3f5f; /* Darker shade for the heading */
-    margin-bottom: 15px;
-    font-weight: 600; /* Bolder font for the heading */
-    font-size: 1.5em; /* Larger font size for the heading */
+    color: #333; /* Darker color for contrast */
+    margin-bottom: 30px; /* More space below the heading */
+    font-weight: 700; /* Bold font weight for the heading */
+    font-size: 2em; /* Larger font size for the heading */
+    padding: 30px;
+    text-align: center;
+    
 }
 
 .awards ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Removes default margin */
 }
 
 .awards li {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center; /* Aligns items vertically in the center */
-    justify-content: flex-start; /* Aligns items to the start of the container */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    background-color: #f9f9f9; /* Light grey background for each item */
+    border-radius: 5px; /* Rounded corners for each item */
+    margin-bottom: 20px; /* More space between items */
+    padding: 20px; /* Padding inside each item */
+    display: block; /* Block display for full-width cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for cards */
 }
 
 .awards img {
-    width: 100px; /* Fixed width for consistency */
-    margin-right: 10px; /* Space between image and text */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+    width: 100px; /* Fixed width for logos */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and the text */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
-
-/* Hover effects */
+/* Hover effects for interactive elements */
 .awards li:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    cursor: pointer;
+    background-color: #eef2f7; /* Light blue background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+    transform: translateY(-3px); /* Slight move upwards on hover */
 }
 
 .awards img:hover {
-    transform: rotate(10deg); /* Rotate image slightly on hover */
+    transform: none; /* Remove rotation for a cleaner look */
 }
 
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .awards {
+        padding: 20px 5%; /* Smaller padding on smaller screens */
+    }
+}
+
+
 .accreditations {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4; /* Light grey background */
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    text-align: center; /* Aligns text to the left for a cleaner look */
+    background-color: #ffffff; /* White background for a clean, modern look */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Open Sans', sans-serif; /* Modern font */
+    max-width: 960px; /* Restricts the maximum width for readability */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
+    margin: 20px auto; /* Centers the section with margin on all sides */
+    padding: 40px; 
+    
 }
 
 .accreditations h2 {
-    color: #2c3e50; /* Dark blue color for the heading */
-    margin-bottom: 15px;
-    font-weight: 600; /* Bolder font for the heading */
-    font-size: 1.5em; /* Larger font size for the heading */
+    color: #333; /* Darker color for contrast */
+    margin-bottom: 30px; /* More space below the heading */
+    font-weight: 700; /* Bold font weight for the heading */
+    font-size: 2em; /* Larger font size for the heading */
 }
 
 .accreditations ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Removes default margin */
 }
 
 .accreditations li {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: flex-start; /* Aligns items to the top */
-    justify-content: flex-start; /* Aligns items to the left */
-    transition: transform 0.3s ease-in-out;
+    background-color: #f9f9f9; /* Light grey background for each item */
+    border-radius: 5px; /* Rounded corners for each item */
+    margin-bottom: 20px; /* More space between items */
+    padding: 20px; /* Padding inside each item */
+    display: block; /* Block display for full-width cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Subtle shadow for cards */
 }
 
 .accreditations img {
-    width: auto; /* Allows the image to maintain its aspect ratio */
-    max-width: 140px; /* Slightly larger than before */
-    height: auto;
-    margin-right: 20px; /* Adds space between the image and the text */
-    transition: transform 0.3s ease-in-out;
+    width: 100px; /* Fixed width for logos */
+    height: auto; /* Auto height to maintain aspect ratio */
+    margin-right: 20px; /* Space between the image and the text */
+    border-radius: 5px; /* Rounded corners for images */
 }
 
 .accreditations p {
-    color: #34495e; /* Slightly lighter blue for the text */
-    text-align: justify;
-    max-width: 80%;
-    margin: 0; /* Removes automatic margin */
-    font-size: 1em; /* Standard font size */
-    line-height: 1.6; /* Improved line spacing for readability */
-    margin-bottom: 1em;
+    color: #555; /* Dark grey color for the paragraph text */
+    text-align: left; /* Align text to the left */
+    max-width: none; /* Allows text to take up available space */
+    margin-bottom: 0; /* Removes bottom margin from paragraph */
+    line-height: 1.8; /* More line height for readability */
 }
 
-/* Hover effects */
+/* Hover effects for interactive elements */
 .accreditations li:hover {
-    transform: scale(1.05);
-    cursor: pointer;
+    background-color: #eef2f7; /* Light blue background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Larger shadow on hover */
+    transform: translateY(-3px); /* Slight move upwards on hover */
 }
 
-.accreditations img:hover {
-    transform: rotate(-5deg);
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .accreditations {
+        padding: 20px; /* Less padding on smaller screens */
+        margin: 20px auto; /* Less margin on smaller screens */
+    }
+
+    .accreditations img {
+        margin-bottom: 10px; /* Space below image on smaller screens */
+    }
+
+    .accreditations li {
+        display: block; /* Stack vertically on smaller screens */
+    }
 }
 
 
 .service-item .btn {
+    position: absolute;
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -1667,7 +1791,11 @@ a:focus {
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effects */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    cursor: pointer; /* Changes the mouse cursor to indicate clickable */
+    cursor: pointer;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%); 
+    
 }
 
 .service-item .btn:hover, .service-item .btn:focus {
@@ -1681,3 +1809,13 @@ a:focus {
 .service-item .btn:focus {
     border: 2px solid #fff; /* Add a border to highlight focus */
 }
+
+@media(max-width: 767.98px) { 
+.awards h2 {
+    padding-top: 150px; /* Larger font size for the heading */
+}
+}
+
+
+
+

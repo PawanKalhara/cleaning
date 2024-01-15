@@ -85,3 +85,13 @@ window.addEventListener('scroll', function() {
 });
 
 
+const trustedLogosWrapper = document.querySelector('.trusted-logos-wrapper');
+trustedLogosWrapper.addEventListener('mouseover', () => {
+    trustedLogosWrapper.style.animationPlayState = 'paused';
+});
+
+trustedLogosWrapper.addEventListener('mouseout', () => {
+    trustedLogosWrapper.style.animationPlayState = 'running';
+});
+
+
