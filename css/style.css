@@ -104,11 +104,12 @@ a:focus {
 
     position: fixed; /* Changed from relative to fixed */
     width: 100%;
-    background: #222380;
+    background: #00539C;
     top: 0; /* Added to fix at the top */
     left: 0; /* Added to align left */
     right: 0; /* Added to align right */
     z-index: 1000; /* Ensure it's above other content */
+    padding-top: 0px; /* Smaller padding */
 }
 
 
@@ -128,8 +129,8 @@ a:focus {
 
 .header .brand img {
     width: auto;
-    height: 170px;
-    width: 140px;
+    height: 130px;
+    width: 100px;
     transition: height 0.3s ease-in-out; /* Adjust this value to fit your logo's height */
 }
 
@@ -236,7 +237,7 @@ a:focus {
     margin-right: 8px;
 }
 .hero-section {
-    background: url('img/bghome.jpg') no-repeat center center;
+    background: url('https://www.ipserv.co.uk/wp-content/uploads/2021/06/IPB44-Web-1080x675.jpg') no-repeat center center;
     background-size: cover;
     padding: 350px 0;
     color: #fff;
@@ -749,6 +750,12 @@ a:focus {
     margin-bottom: 5px;
     flex-grow: 1;
 
+}
+
+.service-item img {
+    width: 100%; /* makes the image width the same as its container */
+    height: 200px; /* set a fixed height, adjust as needed */
+    object-fit: cover; /* ensures the image covers the set area, cropping if necessary */
 }
 
 .section-header h2 {
@@ -1315,7 +1322,7 @@ a:focus {
     position: relative;
     margin-bottom: 0px;
     padding: 60px 0;
-    background: #171226;
+    background: #00539C;
 }
 
 .call-to-action h2 {
@@ -1412,7 +1419,7 @@ a:focus {
     margin-top: 10px;
     padding-top: 90px;
     margin-bottom: 0px;
-    background: #171226;
+    background: #00539C;
     color: #ffffff;
     font-weight: 300;
 }
